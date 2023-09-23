@@ -1,6 +1,6 @@
 import './layout.css'
 import type { Metadata } from 'next'
-import { Provider } from '../providers/provider'
+import { UIProvider } from '../providers/UIprovider'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,9 +11,9 @@ export default function AppLayout(props: any) {
   return (
     <html lang="en" className="light">
       <body>
-        <Provider>
+        <UIProvider>
           {props.children}
-        </Provider>
+        </UIProvider>
       </body>
     </html>
   )

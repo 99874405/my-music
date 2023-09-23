@@ -1,6 +1,6 @@
-import './globals.css'
+import './layout.css'
 import type { Metadata } from 'next'
-import { Providers } from './providers'
+import { Provider } from '../providers/provider'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,9 +11,9 @@ export default function AppLayout(props: any) {
   return (
     <html lang="en" className="light">
       <body>
-        <Providers>
+        <Provider>
           {props.children}
-        </Providers>
+        </Provider>
       </body>
     </html>
   )

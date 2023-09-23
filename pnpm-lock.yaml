@@ -8,6 +8,7 @@ specifiers:
   ahooks: 3.7.8
   autoprefixer: 10.4.16
   axios: 1.5.0
+  dayjs: 1.11.10
   eslint: 8.50.0
   eslint-config-next: 13.5.2
   framer-motion: 10.16.4
@@ -23,6 +24,7 @@ dependencies:
   '@nextui-org/react': 2.1.13_nnr6rhpnk5gpqyzlitmxmnudvm
   ahooks: 3.7.8_react@18.2.0
   axios: 1.5.0
+  dayjs: 1.11.10
   framer-motion: 10.16.4_biqbaboplfbrettd7655fr4n2y
   lodash: 4.17.21
   react: 18.2.0

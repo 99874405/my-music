@@ -7,11 +7,7 @@ export default function App() {
       <Avatar src="https://i.pravatar.cc/150?u=a04258a2462d826712d" size="sm" />
       <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" size="md" />
       <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026302d" size="lg" />
-      <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026708c" className="w-20 h-20 text-large" />
-      <Avatar src="/imgs/lironghao.webp" className="w-20 h-20 text-large" />
-      <Avatar src="/imgs/yangchenglin.webp" className="w-20 h-20 text-large" />
-      <Avatar src="/imgs/wuyuetian.webp" className="w-20 h-20 text-large" />
-      <Avatar src="/imgs/zhoujielun.webp" className="w-20 h-20 text-large" />
+      <Avatar src="/imgs/李荣浩.webp" className="w-20 h-20 text-large" />
     </div>
   )
 }

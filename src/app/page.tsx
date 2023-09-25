@@ -8,7 +8,7 @@ export default function App() {
       <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" size="md" />
       <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026302d" size="lg" />
       <Avatar src="/imgs/李荣浩.webp" className="w-20 h-20 text-large" />
-      <audio src="/mp3/李荣浩 - 歌谣.mp3" controls></audio>
+      <audio src="/mp3/李荣浩-乌梅子酱.flac" controls></audio>
     </div>
   )
 }

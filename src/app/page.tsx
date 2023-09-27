@@ -2,13 +2,34 @@
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from '@nextui-org/react'
 export default function App() {
   return (
-    <div className="flex gap-4 items-center">
-      <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" className="w-6 h-6 text-tiny" />
-      <Avatar src="https://i.pravatar.cc/150?u=a04258a2462d826712d" size="sm" />
-      <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" size="md" />
-      <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026302d" size="lg" />
-      <Avatar src="/imgs/李荣浩.webp" className="w-20 h-20 text-large" />
-      <audio src="/mp3/李荣浩-乌梅子酱.flac" controls></audio>
-    </div>
+    <Table isStriped aria-label="Example static collection table">
+      <TableHeader>
+        <TableColumn>音乐标题</TableColumn>
+        <TableColumn>专辑</TableColumn>
+        <TableColumn>时长</TableColumn>
+      </TableHeader>
+      <TableBody>
+        <TableRow key="1">
+          <TableCell>山川</TableCell>
+          <TableCell>??</TableCell>
+          <TableCell>03:45</TableCell>
+        </TableRow>
+        <TableRow key="2">
+          <TableCell>歌谣</TableCell>
+          <TableCell>??</TableCell>
+          <TableCell>03:45</TableCell>
+        </TableRow>
+        <TableRow key="3">
+          <TableCell>模特</TableCell>
+          <TableCell>??</TableCell>
+          <TableCell>03:45</TableCell>
+        </TableRow>
+        <TableRow key="4">
+          <TableCell>获奖人</TableCell>
+          <TableCell>??</TableCell>
+          <TableCell>03:45</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   )
 }

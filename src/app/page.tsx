@@ -4,7 +4,7 @@ export default function App() {
   return (
     <Table isStriped aria-label="Example static collection table">
       <TableHeader>
-        <TableColumn>音乐标题</TableColumn>
+        <TableColumn>歌曲</TableColumn>
         <TableColumn>专辑</TableColumn>
         <TableColumn>时长</TableColumn>
       </TableHeader>

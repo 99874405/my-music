@@ -1,8 +1,8 @@
 'use client'
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner } from '@nextui-org/react'
-import { FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../hooks/usePlayer'
 import { useReactive, useMount } from 'ahooks'
+import { renderSong } from '../utils/render'
 import { default as axios } from 'axios'
 
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
         loadingContent={<Spinner />}>
         {state.musicList.map((item: { song: string; album: string; duration: string; }, index) => (
           <TableRow key={index}>
-            <TableCell>{item.song}</TableCell>
+            <TableCell>{renderSong(item.song, player)}</TableCell>
             <TableCell>{item.album}</TableCell>
             <TableCell>{item.duration}</TableCell>
           </TableRow>

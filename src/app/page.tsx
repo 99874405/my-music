@@ -3,18 +3,17 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from 
 import { FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../hooks/usePlayer'
 import { useReactive, useMount } from 'ahooks'
-import { motion } from 'framer-motion'
 import { default as axios } from 'axios'
 
 export default function App() {
   const player = usePlayer()
   const state = useReactive({
-    musics: [],
+    musicList: [],
   })
 
   useMount(() => {
-    axios('/mp3/data.json').then(resp => {
-      state.musics = resp.data
+    axios('/mp3.json').then(resp => {
+      state.musicList = resp.data
     })
   })
 
@@ -26,28 +25,11 @@ export default function App() {
         <TableColumn>时长</TableColumn>
       </TableHeader>
       <TableBody>
-        {state.musics.map((item, index) => (
+        {state.musicList.map((item, index) => (
           <TableRow key={index}>
-            <TableCell>
-              <div
-                className="flex flex-row items-center gap-x-2 cursor-pointer"
-                onClick={() => player.play('/mp3/李荣浩-' + item.name + '.flac')}>
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20
-                  }}><FcMusic /></motion.div>
-                <span>{item.name}</span>
-              </div>
-            </TableCell>
-            <TableCell>
-              {item.referer}
-            </TableCell>
-            <TableCell>
-              {item.duration}
-            </TableCell>
+            <TableCell>{item.song}</TableCell>
+            <TableCell>{item.album}</TableCell>
+            <TableCell>{item.duration}</TableCell>
           </TableRow>
         ))}
       </TableBody>

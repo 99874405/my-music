@@ -32,7 +32,7 @@ export default function App() {
       <TableBody
         isLoading={state.loading}
         loadingContent={<Spinner />}>
-        {state.musicList.map((item, index) => (
+        {state.musicList.map((item: { song: string; album: string; duration: string; }, index) => (
           <TableRow key={index}>
             <TableCell>{item.song}</TableCell>
             <TableCell>{item.album}</TableCell>

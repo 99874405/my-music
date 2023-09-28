@@ -20,13 +20,18 @@ export default function App() {
   })
 
   return (
-    <Table isStriped aria-label="Example static collection table">
+    <Table
+      isStriped
+      classNames={{ table: 'min-h-[400px]' }}
+      aria-label="Example static collection table">
       <TableHeader>
         <TableColumn>歌曲</TableColumn>
         <TableColumn>专辑</TableColumn>
         <TableColumn>时长</TableColumn>
       </TableHeader>
-      <TableBody loadingContent={<Spinner />} isLoading={state.loading}>
+      <TableBody
+        isLoading={state.loading}
+        loadingContent={<Spinner />}>
         {state.musicList.map((item, index) => (
           <TableRow key={index}>
             <TableCell>{item.song}</TableCell>

@@ -5,7 +5,7 @@ export function renderSong(song: any, player: any) {
     <div
       className="flex flex-row items-center gap-1 cursor-pointer"
       onClick={() => player.play(`/mp3/李荣浩-${song}.flac`)}>
-      <FcMusic />
+      <FcMusic className="rotate" />
       <span>{song}</span>
     </div>
   )

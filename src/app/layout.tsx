@@ -1,4 +1,4 @@
-import './_global.css'
+import './global.css'
 import type { Metadata } from 'next'
 import { NextUIProvider } from '../providers/NextUIProvider'
 

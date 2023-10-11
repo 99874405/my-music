@@ -1,6 +1,7 @@
 import './global.css'
 import type { Metadata } from 'next'
 import { NextUIProvider } from '../providers/NextUIProvider'
+import { PlayerControlProvider } from '../providers/PlayerControlProvider'
 
 export const metadata: Metadata = {
   title: 'My Music',
@@ -12,7 +13,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <html lang="en" className="light">
       <body>
         <NextUIProvider>
-          {children}
+          <PlayerControlProvider>
+            {children}
+          </PlayerControlProvider>
         </NextUIProvider>
       </body>
     </html>

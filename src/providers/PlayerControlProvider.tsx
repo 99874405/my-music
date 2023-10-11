@@ -9,11 +9,12 @@ export const usePlayer = () => useContext(context)
 export function PlayerControlProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useSetState({
     data: [],
+    loading: !0,
   })
 
   useMount(() => {
     request.get('/mock.json?t=1.0.0')
-      .then(({ data }) => setState({ data }))
+      .then(({ data }) => setState({ data, loading: !1 }))
   })
 
   return (

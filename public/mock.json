@@ -1,47 +1,65 @@
 [
   {
-    "song": "不遗憾",
+    "title": "不遗憾",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/不遗憾.flac"
   },
   {
-    "song": "歌谣",
+    "title": "歌谣",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/歌谣.flac"
   },
   {
-    "song": "获奖人",
+    "title": "获奖人",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/获奖人.flac"
   },
   {
-    "song": "麻雀",
+    "title": "麻雀",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/麻雀.flac"
   },
   {
-    "song": "模特",
+    "title": "模特",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/模特.flac"
   },
   {
-    "song": "山川",
+    "title": "山川",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/山川.flac"
   },
   {
-    "song": "我爱你",
+    "title": "我爱你",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/我爱你.flac"
   },
   {
-    "song": "乌梅子酱",
+    "title": "乌梅子酱",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/乌梅子酱.flac"
   },
   {
-    "song": "喜剧之王",
+    "title": "喜剧之王",
     "album": "??",
-    "duration": "03:20"
+    "duration": "03:20",
+    "coverArt": null,
+    "playLink": "/music/喜剧之王.flac"
   }
 ]

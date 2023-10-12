@@ -4,6 +4,7 @@
     "album": "你的婚礼 电影原声带",
     "artist": "李荣浩",
     "duration": "05:20",
+    "coverArt": "/image/李荣浩-不遗憾.webp",
     "playLink": "/music/李荣浩-不遗憾.flac"
   },
   {
@@ -11,6 +12,7 @@
     "album": "歌谣",
     "artist": "李荣浩",
     "duration": "05:25",
+    "coverArt": "/image/李荣浩-歌谣.webp",
     "playLink": "/music/李荣浩-歌谣.flac"
   },
   {
@@ -18,6 +20,7 @@
     "album": "纵横四海",
     "artist": "李荣浩",
     "duration": "04:00",
+    "coverArt": "/image/李荣浩-获奖人.webp",
     "playLink": "/music/李荣浩-获奖人.flac"
   },
   {
@@ -25,6 +28,7 @@
     "album": "麻雀",
     "artist": "李荣浩",
     "duration": "04:12",
+    "coverArt": "/image/李荣浩-麻雀.webp",
     "playLink": "/music/李荣浩-麻雀.flac"
   },
   {
@@ -32,6 +36,7 @@
     "album": "模特",
     "artist": "李荣浩",
     "duration": "05:06",
+    "coverArt": "/image/李荣浩-模特.webp",
     "playLink": "/music/李荣浩-模特.flac"
   },
   {
@@ -39,6 +44,7 @@
     "album": "纵横四海",
     "artist": "李荣浩",
     "duration": "04:52",
+    "coverArt": "/image/李荣浩-山川.webp",
     "playLink": "/music/李荣浩-山川.flac"
   },
   {
@@ -46,6 +52,7 @@
     "album": "麻雀",
     "artist": "李荣浩",
     "duration": "05:46",
+    "coverArt": "/image/李荣浩-我爱你.webp",
     "playLink": "/music/李荣浩-我爱你.flac"
   },
   {
@@ -53,6 +60,7 @@
     "album": "纵横四海",
     "artist": "李荣浩",
     "duration": "04:17",
+    "coverArt": "/image/李荣浩-乌梅子酱.webp",
     "playLink": "/music/李荣浩-乌梅子酱.flac"
   },
   {
@@ -60,6 +68,7 @@
     "album": "李荣浩",
     "artist": "李荣浩",
     "duration": "04:21",
+    "coverArt": "/image/李荣浩-喜剧之王.webp",
     "playLink": "/music/李荣浩-喜剧之王.flac"
   },
   {
@@ -67,6 +76,7 @@
     "album": "半熟宣言",
     "artist": "杨丞琳",
     "duration": "04:51",
+    "coverArt": "/image/杨丞琳-带我走.webp",
     "playLink": "/music/杨丞琳-带我走.ape"
   }
 ]

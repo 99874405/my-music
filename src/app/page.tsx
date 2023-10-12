@@ -8,7 +8,7 @@ export default function App() {
     <Table
       isStriped
       classNames={{ table: 'min-h-[400px]' }}
-      aria-label="Example static collection table">
+      aria-label="Example table with custom cells">
       <TableHeader>
         <TableColumn>歌曲</TableColumn>
         <TableColumn>歌手</TableColumn>
@@ -18,8 +18,8 @@ export default function App() {
       <TableBody
         isLoading={player.loading}
         loadingContent={<Spinner />}>
-        {player.data.map((item, index) => (
-          <TableRow key={index}>
+        {player.data.map((item, key) => (
+          <TableRow key={key}>
             <TableCell>{item.title}</TableCell>
             <TableCell>{item.artist}</TableCell>
             <TableCell>{item.album}</TableCell>

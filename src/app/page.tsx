@@ -1,9 +1,27 @@
 'use client'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner } from '@nextui-org/react'
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User } from '@nextui-org/react'
 import { usePlayer } from '../providers/PlayerControlProvider'
+import { useMemoizedFn } from 'ahooks'
 
 export default function App() {
   const player = usePlayer()
+  const renderCell = useMemoizedFn((record, columnKey) => {
+    switch (columnKey) {
+      case 'title':
+        return (
+          <div className="cursor-pointer">
+            <User
+              name={record.title}
+              description={`专辑: ${record.album}`}
+              avatarProps={{ src: record.coverArt, isBordered: true }}
+            />
+          </div>
+        )
+      default:
+        return record[columnKey]
+    }
+  })
+
   return (
     <Table
       isStriped
@@ -12,18 +30,16 @@ export default function App() {
       <TableHeader>
         <TableColumn>歌曲</TableColumn>
         <TableColumn>歌手</TableColumn>
-        <TableColumn>专辑</TableColumn>
         <TableColumn>时长</TableColumn>
       </TableHeader>
       <TableBody
         isLoading={player.loading}
         loadingContent={<Spinner />}>
-        {player.data.map((item, key) => (
+        {player.data.map((record, key) => (
           <TableRow key={key}>
-            <TableCell>{item.title}</TableCell>
-            <TableCell>{item.artist}</TableCell>
-            <TableCell>{item.album}</TableCell>
-            <TableCell>{item.duration}</TableCell>
+            <TableCell>{renderCell(record, 'title')}</TableCell>
+            <TableCell>{renderCell(record, 'artist')}</TableCell>
+            <TableCell>{renderCell(record, 'duration')}</TableCell>
           </TableRow>
         ))}
       </TableBody>

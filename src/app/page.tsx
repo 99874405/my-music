@@ -40,7 +40,7 @@ export default function App() {
           height={150}
           src="https://qpic.y.qq.com/music_cover/iaVNVUXOg73ua71Z0dtuz7Yk5H0BzPibuKcx6noUYeFme1JJ3jibxe5vQ/600?n=1" />
         <div className="flex flex-col justify-center">
-          <div className="text-2xl">Next Music: 新一代听歌方式</div>
+          <div className="text-2xl">My Music: 新一代听歌方式</div>
           <div className="flex items-center mt-3 text-sm text-gray-500"><FiGithub /> &nbsp;大家喊我小虎牙</div>
           <div className="flex items-center mt-1 text-sm text-gray-500"><FiClock /> &nbsp;10/12 14:14</div>
           <div className="flex items-center mt-3">

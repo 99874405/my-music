@@ -2,7 +2,7 @@
 import { createContext, useContext } from 'react'
 import { useSetState, useMount } from 'ahooks'
 import { default as request } from 'axios'
-const context = createContext()
+const context = createContext(void 0)
 const Provider = context.Provider
 
 export const usePlayer = () => useContext(context)

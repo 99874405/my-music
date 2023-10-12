@@ -9,16 +9,18 @@ export default function App() {
     switch (columnKey) {
       case 'title':
         return (
-          <div className="cursor-pointer">
-            <User
-              name={record.title}
-              description={`专辑: ${record.album}`}
-              avatarProps={{ src: record.coverArt, isBordered: true }}
-            />
-          </div>
+          <User
+            name={record.title}
+            className="cursor-pointer"
+            description={`专辑: ${record.album}`}
+            avatarProps={{ src: record.coverArt, isBordered: true }} />
         )
       default:
-        return record[columnKey]
+        return (
+          <span>
+            {record[columnKey]}
+          </span>
+        )
     }
   })
 

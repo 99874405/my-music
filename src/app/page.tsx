@@ -15,9 +15,15 @@ export default function App() {
             description={`专辑: ${record.album}`}
             avatarProps={{ src: record.coverArt, isBordered: true }} />
         )
-      default:
+      case 'artist':
         return (
-          <span>
+          <span className="text-stone-500">
+            {record[columnKey]}
+          </span>
+        )
+      case 'duration':
+        return (
+          <span className="text-stone-500">
             {record[columnKey]}
           </span>
         )

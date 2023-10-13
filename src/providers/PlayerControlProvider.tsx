@@ -1,14 +1,16 @@
 'use client'
-import { useSetState, useMount, useUpdateEffect } from 'ahooks'
-import { createContext, useContext } from 'react'
+import { useSetState, useMount, useMemoizedFn } from 'ahooks'
+import { createContext, useContext, useRef } from 'react'
 const context = createContext(void 0)
 const Provider = context.Provider
 
 export const usePlayer = () => useContext(context)
 export function PlayerControlProvider({ children }: { children: React.ReactNode }) {
+  const [audioControl] = [useRef(new Audio()).current]
   const [state, setState] = useSetState({
     loading: !0,
     data: [],
+    isPlaying: false,
   })
 
   useMount(() => {
@@ -18,10 +20,21 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     })
   })
 
+  const play = useMemoizedFn((musicIndex) => {
+    if (audioControl.src && typeof musicIndex !== 'number') {
+      audioControl.paused ? audioControl.play() : audioControl.pause()
+      setState({ isPlaying: !audioControl.paused })
+      return
+    }
+    audioControl.src = state.data[musicIndex || 0].playLink
+    audioControl.play()
+    setState({ isPlaying: true })
+  })
+
   return (
     <Provider
-      value={state}
       children={children}
+      value={{ ...state, play }}
     />
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 import { Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User } from '@nextui-org/react'
-import { FcFlashOn, FcMusic } from 'react-icons/fc'
+import { FcDebian, FcMusic } from 'react-icons/fc'
 import { FaHeadphones } from 'react-icons/fa'
 import { usePlayer } from '../providers/PlayerControlProvider'
 import { useMemoizedFn } from 'ahooks'
@@ -43,8 +43,8 @@ export default function App() {
             src="https://qpic.y.qq.com/music_cover/iaVNVUXOg73ua71Z0dtuz7Yk5H0BzPibuKcx6noUYeFme1JJ3jibxe5vQ/600?n=1" />
           <div className="pt-2">
             <div className="text-2xl">My Music: 新一代的听歌应用</div>
-            <div className="flex items-center mt-1 text-sm text-stone-500"><FcFlashOn />&nbsp;畅听音乐，发现新声音。</div>
-            <div className="flex items-center mt-1 text-sm text-stone-500"><FcFlashOn />&nbsp;Summer</div>
+            <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;畅听音乐，发现新声音。</div>
+            <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>
             <div className="flex items-center my-2 text-sm text-stone-700"><Divider /></div>
             <div className="flex items-center mt-2 text-sm text-stone-700"><FcMusic />&nbsp;不遗憾 - 李荣浩</div>
             <div className="flex items-center mt-2 text-sm text-stone-700">

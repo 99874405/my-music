@@ -2,7 +2,7 @@
 module.exports = {
   output: 'export',
   distDir: 'build',
-  assetPrefix: './',
+  assetPrefix: '.',
   typescript: {
     ignoreBuildErrors: true,
   },

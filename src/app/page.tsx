@@ -32,23 +32,25 @@ export default function App() {
   })
 
   return (
-    <div className="p-5">
-      <div className="flex gap-x-5">
-        <Image
-          width={165}
-          height={165}
-          src="https://qpic.y.qq.com/music_cover/iaVNVUXOg73ua71Z0dtuz7Yk5H0BzPibuKcx6noUYeFme1JJ3jibxe5vQ/600?n=1" />
-        <div className="pt-2">
-          <div className="text-2xl">My Music: 新一代听歌方式</div>
-          <div className="flex items-center mt-3 text-sm text-stone-500"><ImHappy /> &nbsp;大家喊我小虎牙</div>
-          <div className="flex items-center mt-1 text-sm text-stone-500"><ImClock /> &nbsp;10/12 14:14</div>
-          <div className="flex items-center mt-3 text-sm text-stone-500">
-            <Button
-              size="sm"
-              startContent={<ImHeadphones />}
-              className="bg-green-600 text-white">
-              播放歌曲
-            </Button>
+    <div className="container mx-auto p-5">
+      <div className="mt-5">
+        <div className="flex gap-x-5">
+          <Image
+            width={165}
+            height={165}
+            src="https://qpic.y.qq.com/music_cover/iaVNVUXOg73ua71Z0dtuz7Yk5H0BzPibuKcx6noUYeFme1JJ3jibxe5vQ/600?n=1" />
+          <div className="pt-2">
+            <div className="text-2xl">My Music: 新一代听歌方式</div>
+            <div className="flex items-center mt-3 text-sm text-stone-500"><ImHappy /> &nbsp;大家喊我小虎牙</div>
+            <div className="flex items-center mt-1 text-sm text-stone-500"><ImClock /> &nbsp;10/12 14:14</div>
+            <div className="flex items-center mt-3 text-sm text-stone-500">
+              <Button
+                size="sm"
+                startContent={<ImHeadphones />}
+                className="bg-green-600 text-white">
+                播放歌曲
+              </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -53,6 +53,7 @@ export default function App() {
                     size="sm"
                     startContent={<FaHeadphones />}
                     className="bg-green-600 text-white"
+                    disabled={player.dataLoading}
                     onClick={() => player.play()}>
                     {player.isPlaying ? '暂停' : '播放'}音乐
                   </Button>
@@ -73,7 +74,7 @@ export default function App() {
             <TableColumn>时长</TableColumn>
           </TableHeader>
           <TableBody
-            isLoading={player.loading}
+            isLoading={player.dataLoading}
             loadingContent={<Spinner />}>
             {player.data.map((record, key = record.key) => (
               <TableRow

@@ -8,14 +8,14 @@ export const usePlayer = () => useContext(context)
 export function PlayerControlProvider({ children }: { children: React.ReactNode }) {
   const [audioControl] = [useRef(typeof Audio == 'function' && new Audio()).current]
   const [state, setState] = useSetState({
-    loading: !0,
+    dataLoading: !0,
     data: [],
     isPlaying: false,
   })
 
   useMount(() => {
     setState({
-      loading: !1,
+      dataLoading: !1,
       data: require('./mock.json').data
         .map((item, key) => Object.assign(item, { key })),
     })

@@ -21,7 +21,7 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
   })
 
   const play = useMemoizedFn((musicIndex) => {
-    if (audioControl.src && typeof musicIndex !== 'number' /* 判断点击 [播放歌曲] */) {
+    if (audioControl.src && musicIndex == void 0 /* 通过[播放音乐]按钮 触发音乐的播放与暂停*/) {
       audioControl.paused ? audioControl.play() : audioControl.pause()
       setState({ isPlaying: !audioControl.paused })
       return

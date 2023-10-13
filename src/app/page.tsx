@@ -54,7 +54,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="mt-5">
+      <div className="mt-10">
         <Table
           isStriped
           classNames={{ table: 'min-h-[400px]' }}

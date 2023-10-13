@@ -11,6 +11,8 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     dataLoading: !0,
     data: [],
     isPlaying: false,
+    playMusic: null,
+    playMusicIndex: -1,
   })
 
   useMount(() => {
@@ -27,9 +29,10 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
       setState({ isPlaying: !audioControl.paused })
       return
     }
+
+    setState({ isPlaying: true, playMusic: state.data[musicIndex || 0], playMusicIndex: musicIndex || 0 })
     audioControl.src = state.data[musicIndex || 0].playLink
     audioControl.play()
-    setState({ isPlaying: true })
   })
 
   return (

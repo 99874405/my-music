@@ -6,7 +6,7 @@ const Provider = context.Provider
 
 export const usePlayer = () => useContext(context)
 export function PlayerControlProvider({ children }: { children: React.ReactNode }) {
-  const [audioControl] = [useRef(new Audio()).current]
+  const [audioControl] = [useRef(typeof Audio == 'function' && new Audio()).current]
   const [state, setState] = useSetState({
     loading: !0,
     data: [],

@@ -16,7 +16,8 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
   useMount(() => {
     setState({
       loading: !1,
-      data: require('./mock.json').data,
+      data: require('./mock.json').data
+        .map((item, key) => Object.assign(item, { key })),
     })
   })
 

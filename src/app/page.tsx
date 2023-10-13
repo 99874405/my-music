@@ -13,7 +13,6 @@ export default function App() {
         return (
           <User
             name={record.title}
-            className="cursor-pointer"
             description={`专辑: ${record.album}`}
             avatarProps={{ src: record.coverArt, isBordered: true }} />
         )
@@ -73,7 +72,10 @@ export default function App() {
             isLoading={player.loading}
             loadingContent={<Spinner />}>
             {player.data.map((record, key = record.key) => (
-              <TableRow key={key} onClick={() => player.play(key)}>
+              <TableRow
+                key={key}
+                className="cursor-pointer"
+                onClick={() => player.play(key)}>
                 <TableCell>{renderCell(record, 'title')}</TableCell>
                 <TableCell>{renderCell(record, 'artist')}</TableCell>
                 <TableCell>{renderCell(record, 'duration')}</TableCell>

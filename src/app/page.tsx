@@ -48,8 +48,9 @@ export default function App() {
               <Button
                 size="sm"
                 startContent={<ImHeadphones />}
-                className="bg-green-600 text-white">
-                播放歌曲
+                className="bg-green-600 text-white"
+                onClick={() => player.play()}>
+                {player.isPlaying ? '暂停' : '播放'}音乐
               </Button>
             </div>
           </div>
@@ -69,7 +70,7 @@ export default function App() {
             isLoading={player.loading}
             loadingContent={<Spinner />}>
             {player.data.map((record, key) => (
-              <TableRow key={key}>
+              <TableRow key={key} onClick={() => player.play(key)}>
                 <TableCell>{renderCell(record, 'title')}</TableCell>
                 <TableCell>{renderCell(record, 'artist')}</TableCell>
                 <TableCell>{renderCell(record, 'duration')}</TableCell>

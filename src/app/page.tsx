@@ -44,7 +44,7 @@ export default function App() {
           <div className="pt-2">
             <div className="text-2xl">My Music: 新一代听歌方式</div>
             <div className="flex items-center mt-1 text-sm text-stone-500"><FcElectricalSensor /> &nbsp;夏天就是要吃西瓜呀</div>
-            <div className="flex items-center mt-1 text-sm text-stone-500"><FcElectricalSensor /> &nbsp;2023-10-12</div>
+            <div className="flex items-center mt-1 text-sm text-stone-500"><FcElectricalSensor /> &nbsp;2023-10-13</div>
             <div className="flex items-center mt-4 text-sm text-stone-700"><FcMusic /> &nbsp;不遗憾 - 李荣浩</div>
             <div className="flex items-center mt-1 text-sm text-stone-700">
               <Button
@@ -71,7 +71,7 @@ export default function App() {
           <TableBody
             isLoading={player.loading}
             loadingContent={<Spinner />}>
-            {player.data.map((record, key) => (
+            {player.data.map((record, key = record.key) => (
               <TableRow key={key} onClick={() => player.play(key)}>
                 <TableCell>{renderCell(record, 'title')}</TableCell>
                 <TableCell>{renderCell(record, 'artist')}</TableCell>

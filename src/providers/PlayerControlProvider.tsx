@@ -1,7 +1,6 @@
 'use client'
 import { createContext, useContext } from 'react'
 import { useSetState, useMount } from 'ahooks'
-import { default as request } from 'axios'
 const context = createContext(void 0)
 const Provider = context.Provider
 
@@ -13,8 +12,10 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
   })
 
   useMount(() => {
-    request.get('/mock.json?t=1.0.0')
-      .then(({ data }) => setState({ data, loading: !1 }))
+    setState({
+      data: require('./mock.json'),
+      loading: !1,
+    })
   })
 
   return (

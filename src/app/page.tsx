@@ -38,6 +38,7 @@ export default function App() {
           <Image
             width={165}
             height={165}
+            alt=""
             src="https://qpic.y.qq.com/music_cover/iaVNVUXOg73ua71Z0dtuz7Yk5H0BzPibuKcx6noUYeFme1JJ3jibxe5vQ/600?n=1" />
           <div className="pt-2">
             <div className="text-2xl">My Music: 新一代听歌方式</div>

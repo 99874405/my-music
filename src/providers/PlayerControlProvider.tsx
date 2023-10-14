@@ -22,7 +22,13 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     })
   })
 
+  // 手动播放 当前音乐
   const play = useMemoizedFn((musicIndex) => {
+    // 点击 [当前歌曲]
+    if (state.currPlayMusicIndex == musicIndex) {
+      return
+    }
+
     // 点击 [播放音乐] 或者 [暂停音乐]
     if (audioControl.src && musicIndex == void 0) {
       setState({ isPlaying: !state.isPlaying })
@@ -34,11 +40,13 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     audioControl.play()
   })
 
+  // 手动播放 下首音乐
   const playNext = useMemoizedFn(() => {
     const musicIndex = (state.currPlayMusicIndex + 1) % state.data.length
     play(musicIndex)
   })
 
+  // 自动播放 下首音乐
   useEventListener('ended', playNext, {
     target: audioControl,
   })

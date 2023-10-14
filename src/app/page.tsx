@@ -8,13 +8,22 @@ import { useMemoizedFn } from 'ahooks'
 export default function App() {
   const player = usePlayer()
   const renderCell = useMemoizedFn((record, columnKey) => {
+    const getAvatarProps = (isCurrPlayMusic) => {
+      return {
+        src: record.coverArt,
+        isBordered: true,
+        className: isCurrPlayMusic ? 'rotate' : void 0,
+        color: isCurrPlayMusic ? 'success' : void 0,
+      }
+    }
+
     switch (columnKey) {
       case 'title':
         return (
           <User
             name={record.title}
             description={`专辑: ${record.album}`}
-            avatarProps={{ src: record.coverArt, isBordered: true }} />
+            avatarProps={getAvatarProps(player.currPlayMusic == record)} />
         )
       case 'artist':
         return (

@@ -1,5 +1,5 @@
 'use client'
-import { useSetState, useMount, useMemoizedFn } from 'ahooks'
+import { useSetState, useMount, useMemoizedFn, useEventListener  } from 'ahooks'
 import { createContext, useContext, useRef } from 'react'
 const context = createContext(void 0)
 const Provider = context.Provider
@@ -37,6 +37,10 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
   const playNext = useMemoizedFn(() => {
     const musicIndex = (state.currPlayMusicIndex + 1) % state.data.length
     play(musicIndex)
+  })
+
+  useEventListener('ended', playNext, {
+    target: audioControl,
   })
 
   return (

@@ -7,6 +7,11 @@ import { useMemoizedFn } from 'ahooks'
 
 export default function App() {
   const player = usePlayer()
+  const renderSong = useMemoizedFn(() => {
+    if (player.currPlayMusic) return `${player.currPlayMusic.title} - ${player.currPlayMusic.artist}`
+    return '未播放音乐'
+  })
+
   const renderCell = useMemoizedFn((record, columnKey) => {
     const getAvatarProps = (isCurrPlayMusic) => {
       return {
@@ -40,11 +45,6 @@ export default function App() {
     }
   })
 
-  const renderCurrPlaySong = useMemoizedFn(() => {
-    if (player.currPlayMusic) return `${player.currPlayMusic.title} - ${player.currPlayMusic.artist}`
-    return '未播放音乐'
-  })
-
   return (
     <div className="container mx-auto p-5">
       <div className="mt-5">
@@ -61,7 +61,7 @@ export default function App() {
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;不断更新的音乐内容，与朋友分享歌单。</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
                 <div className="flex items-center my-2 text-sm text-stone-700"><Divider /></div>
-                <div className="flex items-center mt-2 text-sm text-stone-700"><FcMusic />&nbsp;{renderCurrPlaySong()}</div>
+                <div className="flex items-center mt-2 text-sm text-stone-700"><FcMusic />&nbsp;{renderSong()}</div>
                 <div className="flex items-center mt-2 text-sm text-stone-700">
                   <Button
                     size="sm"

@@ -2,7 +2,7 @@
 @tailwind utilities;
 @tailwind components;
 
-/* 动画旋转 */
+/* 动画: 转圈 */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -16,7 +16,7 @@
 }
 
 
-/* 动画圆圈 */
+/* 动画: 圆圈 */
 @keyframes circle {
   100% {
     opacity: 0;
@@ -33,7 +33,14 @@
 }
 
 
-/* 暂停动画 */
+/* 动画暂停 */
 .ani-paused {
   animation-play-state: paused;
+}
+
+
+/* 默认样式 */
+* {
+  -webkit-tap-highlight-color: transparent; /* 禁用默认高亮颜色 */
+  touch-action: manipulation; /* 提供更快的点击反馈 */
 }

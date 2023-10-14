@@ -17,7 +17,7 @@ export default function App() {
       return {
         src: record.coverArt,
         isBordered: true,
-        className: isCurrPlayMusic ? 'rotate' : void 0,
+        className: isCurrPlayMusic ? 'ani-rotate' : void 0,
         color: isCurrPlayMusic ? 'success' : void 0,
       }
     }

@@ -2,12 +2,28 @@
   "version": "0.0.1",
   "data": [
     {
+      "title": "不将就",
+      "album": "有理想",
+      "artist": "李荣浩",
+      "duration": "05:13",
+      "coverArt": "./image/李荣浩-不将就.webp",
+      "playLink": "./music/李荣浩-不将就.flac"
+    },
+    {
       "title": "不遗憾",
       "album": "你的婚礼 电影原声带",
       "artist": "李荣浩",
       "duration": "05:20",
       "coverArt": "./image/李荣浩-不遗憾.webp",
       "playLink": "./music/李荣浩-不遗憾.flac"
+    },
+    {
+      "title": "耳朵",
+      "album": "耳朵",
+      "artist": "李荣浩",
+      "duration": "04:01",
+      "coverArt": "./image/李荣浩-耳朵.webp",
+      "playLink": "./music/李荣浩-耳朵.flac"
     },
     {
       "title": "歌谣",
@@ -26,6 +42,14 @@
       "playLink": "./music/李荣浩-获奖人.flac"
     },
     {
+      "title": "戒烟",
+      "album": "嗯",
+      "artist": "李荣浩",
+      "duration": "04:54",
+      "coverArt": "./image/李荣浩-戒烟.webp",
+      "playLink": "./music/李荣浩-戒烟.flac"
+    },
+    {
       "title": "麻雀",
       "album": "麻雀",
       "artist": "李荣浩",
@@ -40,6 +64,14 @@
       "duration": "05:06",
       "coverArt": "./image/李荣浩-模特.webp",
       "playLink": "./music/李荣浩-模特.flac"
+    },
+    {
+      "title": "年少有为",
+      "album": "耳朵",
+      "artist": "李荣浩",
+      "duration": "04:39",
+      "coverArt": "./image/李荣浩-年少有为.webp",
+      "playLink": "./music/李荣浩-年少有为.flac"
     },
     {
       "title": "山川",
@@ -72,6 +104,14 @@
       "duration": "04:21",
       "coverArt": "./image/李荣浩-喜剧之王.webp",
       "playLink": "./music/李荣浩-喜剧之王.flac"
+    },
+    {
+      "title": "纵横四海",
+      "album": "纵横四海",
+      "artist": "李荣浩",
+      "duration": "04:01",
+      "coverArt": "./image/李荣浩-纵横四海.webp",
+      "playLink": "./music/李荣浩-纵横四海.flac"
     },
     {
       "title": "带我走",

@@ -76,7 +76,7 @@ export default function App() {
           <TableBody
             isLoading={player.dataLoading}
             loadingContent={<Spinner />}>
-            {player.data.map((record, key = record.key) => (
+            {player.data.map((record, key) => (
               <TableRow
                 key={key}
                 className="cursor-pointer"

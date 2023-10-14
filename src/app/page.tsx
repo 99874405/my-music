@@ -47,7 +47,7 @@ export default function App() {
 
   return (
     <div className="container mx-auto p-5">
-      <div className="mt-5">
+      <div className="mt-0">
         <Card>
           <CardBody>
             <div className="flex gap-x-5">

@@ -66,7 +66,7 @@ export default function App() {
                   <Button
                     size="sm"
                     startContent={<FaHeadphones />}
-                    className={`bg-${!player.isPlaying ? 'danger' : 'green-600'} text-white`}
+                    className={`${!player.isPlaying ? 'bg-danger' : 'bg-green-600'} text-white`}
                     disabled={player.dataLoading}
                     onClick={() => player.play()}>
                     {!player.isPlaying ? '播放' : '暂停'}音乐

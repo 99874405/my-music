@@ -17,8 +17,8 @@ export default function App() {
       return {
         src: record.coverArt,
         isBordered: true,
-        className: isCurrPlayMusic ? 'ani-rotate' : void 0,
-        color: isCurrPlayMusic ? 'success' : void 0,
+        className: isCurrPlayMusic ? `ani-rotate ${!player.isPlaying && 'ani-paused'}` : void 0,
+        color: isCurrPlayMusic ? !player.isPlaying ? 'danger' : 'success' : void 0,
       }
     }
 
@@ -66,10 +66,10 @@ export default function App() {
                   <Button
                     size="sm"
                     startContent={<FaHeadphones />}
-                    className="bg-green-600 text-white"
+                    className={`bg-${!player.isPlaying ? 'danger' : 'green-600'} text-white`}
                     disabled={player.dataLoading}
                     onClick={() => player.play()}>
-                    {player.isPlaying ? '暂停' : '播放'}音乐
+                    {!player.isPlaying ? '播放' : '暂停'}音乐
                   </Button>
                 </div>
               </div>

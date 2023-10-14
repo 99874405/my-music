@@ -57,7 +57,7 @@ export default function App() {
                 alt=""
                 src="./image/cover.webp" />
               <div className="pt-2">
-                <div className="text-2xl">My Music: 新一代的听歌应用</div>
+                <div className="hidden sm:block sm:text-2xl">My Music: 新一代的听歌应用</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;不断更新音乐内容</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>
                 <div className="flex items-center my-2 text-sm text-stone-700"><Divider /></div>

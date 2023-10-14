@@ -34,10 +34,15 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     audioControl.play()
   })
 
+  const playNext = useMemoizedFn(() => {
+    const musicIndex = (state.currPlayMusicIndex + 1) % state.data.length
+    play(musicIndex)
+  })
+
   return (
     <Provider
       children={children}
-      value={{ ...state, play }}
+      value={{ ...state, play, playNext }}
     />
   )
 }

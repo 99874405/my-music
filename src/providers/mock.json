@@ -112,6 +112,14 @@
       "duration": "04:51",
       "coverArt": "./image/杨丞琳-带我走.webp",
       "playLink": "./music/杨丞琳-带我走.mp3"
+    },
+    {
+      "title": "像是一颗星星",
+      "album": "LIKE A STAR",
+      "artist": "杨丞琳",
+      "duration": "03:50",
+      "coverArt": "./image/杨丞琳-像是一颗星星.webp",
+      "playLink": "./music/杨丞琳-像是一颗星星.mp3"
     }
   ]
 }

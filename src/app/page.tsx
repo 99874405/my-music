@@ -1,6 +1,6 @@
 'use client'
 import { Card, CardBody, Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User } from '@nextui-org/react'
-import { FaHeadphones, FaFastForward } from 'react-icons/fa'
+import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../providers/PlayerControlProvider'
 import { useMemoizedFn } from 'ahooks'
@@ -71,6 +71,16 @@ export default function App() {
                     onClick={() => player.play()}>
                     {!player.isPlaying ? '播放' : '暂停'}音乐
                   </Button>
+                  {player.currPlayMusic && (
+                    <Button
+                      size="sm"
+                      isIconOnly
+                      className="ml-2"
+                      disabled={player.dataLoading}
+                      onClick={() => player.playPrev()}>
+                      <FaFastBackward />
+                    </Button>
+                  )}
                   {player.currPlayMusic && (
                     <Button
                       size="sm"

@@ -40,6 +40,12 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     audioControl.play()
   })
 
+  // 手动播放 上首音乐
+  const playPrev = useMemoizedFn(() => {
+    const musicIndex = (state.currPlayMusicIndex - 1 + state.data.length) % state.data.length
+    play(musicIndex)
+  })
+
   // 手动播放 下首音乐
   const playNext = useMemoizedFn(() => {
     const musicIndex = (state.currPlayMusicIndex + 1) % state.data.length
@@ -54,7 +60,7 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
   return (
     <Provider
       children={children}
-      value={{ ...state, play, playNext }}
+      value={{ ...state, play, playPrev, playNext }}
     />
   )
 }

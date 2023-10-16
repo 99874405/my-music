@@ -9,7 +9,7 @@ export default function App() {
   const player = usePlayer()
   const renderSong = useMemoizedFn(() => {
     if (player.currPlayMusic) return `${player.currPlayMusic.title} - ${player.currPlayMusic.artist}`
-    return '404'
+    return '未播放音乐'
   })
 
   const renderCell = useMemoizedFn((record, columnKey) => {
@@ -55,7 +55,7 @@ export default function App() {
                 width={175}
                 height={175}
                 alt=""
-                src="./image/cover.webp" />
+                src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
               <div className="pt-2">
                 <div className="hidden sm:block sm:text-2xl">My Music: 新一代的听歌应用</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>

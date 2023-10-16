@@ -50,7 +50,7 @@ export default function App() {
       <div className="mt-0">
         <Card
           style={{ backgroundImage: "url('./image/李荣浩.webp')" }}
-          className="bg-right bg-top">
+          className="bg-top bg-right bg-contain bg-no-repeat bg-[#eaeaea]">
           <CardBody>
             <div className="flex gap-x-5">
               <Image

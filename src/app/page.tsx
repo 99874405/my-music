@@ -9,7 +9,7 @@ export default function App() {
   const player = usePlayer()
   const renderSong = useMemoizedFn(() => {
     if (player.currPlayMusic) return `${player.currPlayMusic.title} - ${player.currPlayMusic.artist}`
-    return '未播放音乐'
+    return '404'
   })
 
   const renderCell = useMemoizedFn((record, columnKey) => {

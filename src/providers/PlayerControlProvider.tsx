@@ -1,5 +1,5 @@
 'use client'
-import { useSetState, useMount, useMemoizedFn, useEventListener  } from 'ahooks'
+import { useSetState, useMount, useMemoizedFn, useEventListener } from 'ahooks'
 import { createContext, useContext, useRef } from 'react'
 const context = createContext(void 0)
 const Provider = context.Provider
@@ -29,7 +29,7 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
       return
     }
 
-    // 点击 [播放音乐] 或者 [暂停音乐]
+    // 点击 [播放音乐 | 暂停音乐]
     if (audioControl.src && musicIndex == void 0) {
       setState({ isPlaying: !state.isPlaying })
       return audioControl.paused ? audioControl.play() : audioControl.pause()

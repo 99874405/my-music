@@ -46,7 +46,7 @@ export default function App() {
   })
 
   return (
-    <div className="container mx-auto p-5">
+    <div className="max-w-screen-lg mx-auto p-5">
       <div className="mt-0">
         <Card
           style={{ backgroundImage: "url('./image/李荣浩.webp')" }}
@@ -54,16 +54,16 @@ export default function App() {
           <CardBody>
             <div className="flex gap-x-5">
               <Image
-                width={175}
-                height={175}
+                width={224}
+                height={224}
                 alt=""
                 src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
               <div className="pt-2">
-                <div className="hidden sm:block sm:text-2xl">My Music: 新一代的听歌应用</div>
+                <div className="hidden sm:block text-2xl">My Music: 新一代的听歌应用</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>
                 <div className="flex items-center my-2 text-sm text-stone-800"><Divider /></div>
-                <div className="flex items-center mt-2 text-sm text-stone-800"><FcMusic />&nbsp;{renderSong()}</div>
+                <div className="flex items-center mt-6 text-sm text-stone-800"><FcMusic />&nbsp;{renderSong()}</div>
                 <div className="flex items-center mt-2 text-sm text-stone-800">
                   <Button
                     size="sm"

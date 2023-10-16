@@ -48,7 +48,7 @@ export default function App() {
   return (
     <div className="container mx-auto p-5">
       <div className="mt-0">
-        <Card>
+        <Card className="bg-[url('/image/李荣浩.webp')] bg-right bg-top">
           <CardBody>
             <div className="flex gap-x-5">
               <Image

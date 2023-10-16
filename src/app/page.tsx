@@ -32,13 +32,13 @@ export default function App() {
         )
       case 'artist':
         return (
-          <span className="text-stone-500">
+          <span className="text-stone-600">
             {record[columnKey]}
           </span>
         )
       case 'duration':
         return (
-          <span className="text-stone-500">
+          <span className="text-stone-600">
             {record[columnKey]}
           </span>
         )
@@ -60,9 +60,9 @@ export default function App() {
                 <div className="hidden sm:block sm:text-2xl">My Music: 新一代的听歌应用</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>
-                <div className="flex items-center my-2 text-sm text-stone-700"><Divider /></div>
-                <div className="flex items-center mt-2 text-sm text-stone-700"><FcMusic />&nbsp;{renderSong()}</div>
-                <div className="flex items-center mt-2 text-sm text-stone-700">
+                <div className="flex items-center my-2 text-sm text-stone-800"><Divider /></div>
+                <div className="flex items-center mt-2 text-sm text-stone-800"><FcMusic />&nbsp;{renderSong()}</div>
+                <div className="flex items-center mt-2 text-sm text-stone-800">
                   <Button
                     size="sm"
                     startContent={<FaHeadphones />}

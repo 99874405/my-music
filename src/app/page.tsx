@@ -59,7 +59,7 @@ export default function App() {
                 alt=""
                 src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
               <div className="pt-2">
-                <div className="hidden sm:block text-2xl">My Music: 新一代的听歌应用</div>
+                <div className="hidden sm:block text-2xl">Next Music: 新一代听歌驿站</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>
                 <div className="flex items-center my-2 text-sm text-stone-800"><Divider /></div>

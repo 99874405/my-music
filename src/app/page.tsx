@@ -1,5 +1,5 @@
 'use client'
-import { Card, CardBody, Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User } from '@nextui-org/react'
+import { Card, CardBody, Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User, Tooltip } from '@nextui-org/react'
 import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../providers/PlayerControlProvider'
@@ -32,9 +32,13 @@ export default function App() {
         )
       case 'artist':
         return (
-          <span className="text-stone-600">
-            {record[columnKey]}
-          </span>
+          <Tooltip color="danger" content="演唱会">
+            <span className="text-stone-600 hover:text-rose-600">
+              <a target="_blank" onClick={e => e.stopPropagation()} href={`https://search.damai.cn/search.html?keyword=${record[columnKey]}`}>
+                {record[columnKey]}
+              </a>
+            </span>
+          </Tooltip>
         )
       case 'duration':
         return (

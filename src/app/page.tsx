@@ -52,7 +52,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar>
+      <Navbar shouldHideOnScroll>
         <NavbarBrand>
           <p className="font-bold">Next</p>
         </NavbarBrand>

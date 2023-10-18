@@ -1,6 +1,6 @@
 'use client'
 import { Card, CardBody, Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User, Tooltip } from '@nextui-org/react'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Chip } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Chip, Avatar } from '@nextui-org/react'
 import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../providers/PlayerControlProvider'
@@ -65,6 +65,9 @@ export default function App() {
             <Chip color="success" variant="dot">
               <span className="cursor-pointer" onClick={() => confetti()}>New Version 0.1.1 🎉</span>
             </Chip>
+          </NavbarItem>
+          <NavbarItem>
+            <Avatar size="sm" src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
           </NavbarItem>
         </NavbarContent>
       </Navbar>

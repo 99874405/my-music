@@ -55,9 +55,9 @@ export default function App() {
     <>
       <Navbar shouldHideOnScroll>
         <NavbarBrand>
-          <a href="javascript:;">
+          <span className="cursor-pointer">
             <Logo size="40" />
-          </a>
+          </span>
         </NavbarBrand>
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">

@@ -5,6 +5,7 @@ import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../providers/PlayerControlProvider'
 import { useMemoizedFn } from 'ahooks'
+import { default as Logo } from '../components/logo'
 
 export default function App() {
   const player = usePlayer()
@@ -54,7 +55,7 @@ export default function App() {
     <>
       <Navbar shouldHideOnScroll>
         <NavbarBrand>
-          <p className="font-bold">Next</p>
+          <Logo size="40" />
         </NavbarBrand>
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">

@@ -1,11 +1,12 @@
 'use client'
 import { Card, CardBody, Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User, Tooltip } from '@nextui-org/react'
-import { Navbar, NavbarBrand } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Chip } from '@nextui-org/react'
 import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../providers/PlayerControlProvider'
 import { useMemoizedFn } from 'ahooks'
 import { default as Logo } from '../components/logo'
+import { default as confetti } from 'canvas-confetti'
 
 export default function App() {
   const player = usePlayer()
@@ -59,6 +60,13 @@ export default function App() {
             <Logo size="40" />
           </span>
         </NavbarBrand>
+        <NavbarContent justify="end">
+          <NavbarItem>
+            <Chip color="success" variant="dot">
+              <span className="cursor-pointer" onClick={() => confetti()}>New Version 0.1.1 🎉</span>
+            </Chip>
+          </NavbarItem>
+        </NavbarContent>
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-0">

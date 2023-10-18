@@ -1,9 +1,14 @@
 'use client'
 import { useSetState, useMount, useMemoizedFn, useEventListener } from 'ahooks'
 import { createContext, useContext, useRef } from 'react'
-import { default as nprogress } from 'nprogress'
+import { default as NProgress } from 'nprogress'
 const context = createContext(void 0)
 const Provider = context.Provider
+NProgress.configure({
+  showSpinner: false,
+  trickle: false,
+  minimum: 0,
+})
 
 export const usePlayer = () => useContext(context)
 export function PlayerControlProvider({ children }: { children: React.ReactNode }) {
@@ -39,10 +44,7 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     setState({ isPlaying: true, currPlayMusic: state.data[musicIndex || 0], currPlayMusicIndex: musicIndex || 0 })
     audioControl.src = state.data[musicIndex || 0].playLink
     audioControl.play()
-    nprogress.start()
-    setTimeout(() => {
-      nprogress.done()
-    }, 3000)
+    NProgress.set(0)
   })
 
   // 手动播放 上首音乐
@@ -59,6 +61,12 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
 
   // 自动播放 下首音乐
   useEventListener('ended', playNext, {
+    target: audioControl,
+  })
+
+  // 播放进度
+  useEventListener('timeupdate', () =>
+    NProgress.set(audioControl.currentTime / audioControl.duration), {
     target: audioControl,
   })
 

@@ -58,16 +58,16 @@ export default function App() {
           <CardBody>
             <div className="flex gap-x-5">
               <Image
-                width={224}
-                height={224}
+                width={166}
+                height={166}
                 alt=""
                 src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
-              <div className="pt-2">
+              <div className="pt-1">
                 <div className="hidden sm:block text-2xl">Next Music: 新一代听歌驿站</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
                 <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>
                 <div className="flex items-center my-2 text-sm text-stone-800"><Divider /></div>
-                <div className="flex items-center mt-6 text-sm text-stone-800"><FcMusic />&nbsp;{renderSong()}</div>
+                <div className="flex items-center mt-2 text-sm text-stone-800"><FcMusic />&nbsp;{renderSong()}</div>
                 <div className="flex items-center mt-2 text-sm text-stone-800">
                   <Button
                     size="sm"

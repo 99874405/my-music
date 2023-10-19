@@ -5,7 +5,12 @@ import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../providers/PlayerControlProvider'
 import { useMemoizedFn } from 'ahooks'
-import { LogoIcon as Logo } from '../components/LogoIcon'
+import { LogoIcon } from '../components/LogoIcon'
+import { RepeatOneIcon } from '../components/RepeatOneIcon'
+import { PreviousIcon } from '../components/PreviousIcon'
+import { PauseCircleIcon } from '../components/PauseCircleIcon'
+import { NextIcon } from '../components/NextIcon'
+import { ShuffleIcon } from '../components/ShuffleIcon'
 import { default as confetti } from 'canvas-confetti'
 
 export default function App() {
@@ -64,7 +69,7 @@ export default function App() {
         shouldHideOnScroll>
         <NavbarBrand>
           <span className="cursor-pointer">
-            <Logo size="40" />
+            <LogoIcon size="40" />
           </span>
         </NavbarBrand>
         <NavbarContent justify="end">
@@ -93,7 +98,7 @@ export default function App() {
                   shadow="md"
                   className="object-cover"
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
-                <div className="pt-1 w-[280px]">
+                <div className="pt-1 w-[350px]">
                   <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
                   <div className="text-sm text-foreground/80">{player.data?.length || 0} Tracks</div>
                   <h1 className="font-medium text-lg mt-3">{renderSong('title')}</h1>

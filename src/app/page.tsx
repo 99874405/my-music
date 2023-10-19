@@ -1,6 +1,6 @@
 'use client'
 import { Card, CardBody, Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User, Tooltip } from '@nextui-org/react'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Chip, Avatar } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Chip, Avatar, Progress } from '@nextui-org/react'
 import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../providers/PlayerControlProvider'
@@ -97,6 +97,16 @@ export default function App() {
                   <h3 className="font-semibold text-foreground/90">{renderSong('title')}</h3>
                   <div className="text-sm text-foreground/80">{renderSong('artist')}</div>
                   <h1 className="font-medium text-lg mt-2">Frontend Radio</h1>
+                  <div className="flex flex-col gap-y-1 mt-2">
+                    <Progress
+                      size="sm"
+                      value={33}
+                      classNames={{ indicator: "bg-default-800", track: "bg-default-500/30" }} />
+                    <div className="flex justify-between">
+                      <p className="text-sm">1:23</p>
+                      <p className="text-sm text-foreground/50">4:32</p>
+                    </div>
+                  </div>
                   {/*  
                   <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
                   <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>

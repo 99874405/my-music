@@ -75,14 +75,14 @@ export default function App() {
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-5">
-          <Card className="bg-background/90">
+          <Card className="bg-background/40">
             <CardBody>
               <div className="flex gap-x-5">
                 <Image
                   width={164}
                   height={164}
                   alt=""
-                  shadow="lg"
+                  shadow="md"
                   className="object-cover"
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
                 <div className="pt-2">

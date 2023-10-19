@@ -154,9 +154,9 @@ export default function App() {
             classNames={{ table: 'min-h-[400px]' }}
             aria-label="Example table with custom cells">
             <TableHeader>
-              <TableColumn>歌曲</TableColumn>
-              <TableColumn>歌手</TableColumn>
-              <TableColumn>时长</TableColumn>
+              <TableColumn>Title</TableColumn>
+              <TableColumn>Artist</TableColumn>
+              <TableColumn>Duration</TableColumn>
             </TableHeader>
             <TableBody
               isLoading={player.dataLoading}

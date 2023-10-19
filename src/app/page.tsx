@@ -78,7 +78,7 @@ export default function App() {
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-5">
-          <Card className="bg-background/100">
+          <Card className="bg-background/70">
             <CardBody>
               <div className="flex gap-x-5">
                 <Image
@@ -150,7 +150,7 @@ export default function App() {
         <div className="mt-5">
           <Table
             isStriped
-            classNames={{ table: 'min-h-[400px]' }}
+            classNames={{ table: 'min-h-[400px]', wrapper: 'bg-background/70' }}
             aria-label="Example table with custom cells">
             <TableHeader>
               <TableColumn>Title</TableColumn>

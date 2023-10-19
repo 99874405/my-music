@@ -56,7 +56,7 @@ export default function App() {
   return (
     <>
       <Navbar
-        isBlurred={true}
+        isBlurred={!true}
         shouldHideOnScroll>
         <NavbarBrand>
           <span className="cursor-pointer">
@@ -80,7 +80,7 @@ export default function App() {
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-5">
-          <Card className="bg-background/70">
+          <Card className="bg-background/100">
             <CardBody>
               <div className="flex gap-x-5">
                 <Image
@@ -99,7 +99,7 @@ export default function App() {
                       size="sm"
                       value={player.currPlayProcess}
                       aria-label="Example progress"
-                      classNames={{ indicator: "bg-default-800", track: "bg-default-500/30" }} />
+                      classNames={{ indicator: "bg-black", track: "bg-black-200" }} />
                     <div className="flex justify-between">
                       <p className="text-sm">{player.currPlayTime}</p>
                       <p className="text-sm text-foreground/50">{player.currDoneTime}</p>
@@ -154,7 +154,7 @@ export default function App() {
           <Table
             isStriped
             aria-label="Example table"
-            classNames={{ table: 'min-h-[400px]', wrapper: 'bg-background/70' }}>
+            classNames={{ table: 'min-h-[400px]', wrapper: 'bg-background/100' }}>
             <TableHeader>
               <TableColumn>Title</TableColumn>
               <TableColumn>Artist</TableColumn>

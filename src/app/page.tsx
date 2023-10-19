@@ -72,7 +72,7 @@ export default function App() {
         </NavbarContent>
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
-        <div className="mt-0">
+        <div className="mt-5">
           <Card
             style={{ backgroundImage: `url('./image/${player.currPlayMusic?.artist || '李荣浩'}.webp')` }}
             className="bg-top bg-right bg-contain bg-no-repeat bg-[#eaeaea]">

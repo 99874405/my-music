@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="light">
-      <body className="bg-gradient-to-t from-[#fff1eb] to-green-100">
+      <body className="bg-gradient-to-tl from-[#fff1eb] to-green-200">
         <NextUIProvider>
           <PlayerControlProvider>
             {children}

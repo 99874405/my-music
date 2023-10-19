@@ -33,13 +33,13 @@ export default function App() {
         return (
           <User
             name={record.title}
-            description={`专辑: ${record.album}`}
+            description={`${record.album}`}
             avatarProps={getAvatarProps(player.currPlayMusic == record)} />
         )
 
       case 'artist':
         return (
-          <Tooltip color="danger" content="大麦网">
+          <Tooltip color="danger" content="Go damai">
             <span className="text-foreground/50 hover:text-rose-600">
               <a target="_blank" onClick={e => e.stopPropagation()} href={`https://search.damai.cn/search.html?keyword=${record[columnKey]}`}>
                 {record[columnKey]}

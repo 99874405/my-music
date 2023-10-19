@@ -89,7 +89,7 @@ export default function App() {
                   height={164}
                   alt=""
                   shadow="md"
-                  className="object-cover"
+                  className="object-cover hidden sm:block"
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
                 <div className="pt-1 w-[350px]">
                   <h3 className="font-semibold text-foreground/90">Daily Mix</h3>

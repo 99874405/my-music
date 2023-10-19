@@ -9,6 +9,7 @@ import { LogoIcon } from '../components/LogoIcon'
 import { RepeatOneIcon } from '../components/RepeatOneIcon'
 import { PreviousIcon } from '../components/PreviousIcon'
 import { PauseCircleIcon } from '../components/PauseCircleIcon'
+import { PlayCircleIcon } from '../components/PlayCircleIcon'
 import { NextIcon } from '../components/NextIcon'
 import { ShuffleIcon } from '../components/ShuffleIcon'
 import { default as confetti } from 'canvas-confetti'
@@ -127,7 +128,7 @@ export default function App() {
                       variant="light"
                       onClick={() => player.play()}
                       className="w-auto h-auto data-[hover]:bg-foreground/10">
-                      <PauseCircleIcon size={45} />
+                      {player.isPlaying ? <PauseCircleIcon size={45} /> : <PlayCircleIcon size={45} />}
                     </Button>
                     <Button
                       isIconOnly

@@ -44,7 +44,8 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
       return audioControl.paused ? audioControl.play() : audioControl.pause()
     }
 
-    setState({ isPlaying: true, currPlayMusic: state.data[musicIndex || 0], currPlayMusicIndex: musicIndex || 0, currPlayProcess: 0 })
+    setState({ isPlaying: true, currPlayMusic: state.data[musicIndex || 0], currPlayMusicIndex: musicIndex || 0 })
+    setState({ currPlayProcess: 0, currPlayTime: '0:00', currDoneTime: '4:00' })
     audioControl.src = state.data[musicIndex || 0].playLink
     audioControl.play()
   })
@@ -68,7 +69,11 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
 
   // 播放进度
   useEventListener('timeupdate', () =>
-    setState({ currPlayProcess: (audioControl.currentTime / audioControl.duration) * 100 }), {
+    setState({
+      currPlayProcess: (audioControl.currentTime / audioControl.duration) * 100,
+      currPlayTime: audioControl.currentTime,
+      currDoneTime: audioControl.duration,
+    }), {
     target: audioControl,
   })
 

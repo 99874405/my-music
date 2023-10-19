@@ -101,8 +101,8 @@ export default function App() {
                       aria-label="Example progress"
                       classNames={{ indicator: "bg-default-800", track: "bg-default-500/30" }} />
                     <div className="flex justify-between">
-                      <p className="text-sm">0:00</p>
-                      <p className="text-sm text-foreground/50">4:32</p>
+                      <p className="text-sm">{player.currPlayTime}</p>
+                      <p className="text-sm text-foreground/50">{player.currDoneTime}</p>
                     </div>
                   </div>
                   <div className="flex items-center justify-center">

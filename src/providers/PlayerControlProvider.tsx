@@ -20,6 +20,8 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     currPlayMusic: null,
     currPlayMusicIndex: -1,
     currPlayProcess: 0,
+    currPlayTime: '0:00',
+    currDoneTime: '4:00',
   })
 
   useMount(() => {

@@ -55,7 +55,7 @@ export default function App() {
   return (
     <>
       <Navbar
-        isBlurred={false}
+        isBlurred={true}
         shouldHideOnScroll>
         <NavbarBrand>
           <span className="cursor-pointer">

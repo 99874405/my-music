@@ -65,14 +65,16 @@ export default function App() {
         </NavbarBrand>
         <NavbarContent justify="end">
           <NavbarItem>
-            <Chip color="success" variant="dot">
-              <span className="cursor-pointer" onClick={() => confetti()}>New Version 0.1.1 🎉</span>
+            <Chip className="cursor-pointer" color="success" variant="dot">
+              <span onClick={() => confetti()}>New Version 0.1.1 🎉</span>
             </Chip>
           </NavbarItem>
           <NavbarItem>
-            <Avatar
-              size="sm"
-              src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
+            <span className="cursor-pointer">
+              <Avatar
+                size="sm"
+                src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
+            </span>
           </NavbarItem>
         </NavbarContent>
       </Navbar>
@@ -95,10 +97,10 @@ export default function App() {
                   <div className="flex flex-col gap-y-1 mt-1">
                     <Progress
                       size="sm"
-                      value={33}
+                      value={0}
                       classNames={{ indicator: "bg-default-800", track: "bg-default-500/30" }} />
                     <div className="flex justify-between">
-                      <p className="text-sm">1:23</p>
+                      <p className="text-sm">0:00</p>
                       <p className="text-sm text-foreground/50">4:32</p>
                     </div>
                   </div>

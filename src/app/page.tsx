@@ -54,7 +54,9 @@ export default function App() {
 
   return (
     <>
-      <Navbar shouldHideOnScroll>
+      <Navbar
+        isBlurred={false}
+        shouldHideOnScroll>
         <NavbarBrand>
           <span className="cursor-pointer">
             <Logo size="40" />
@@ -74,8 +76,8 @@ export default function App() {
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-5">
           <Card
-            style={{ backgroundImage: `url('./image/${player.currPlayMusic?.artist || '李荣浩'}.webp')` }}
-            className="bg-top bg-right bg-contain bg-no-repeat bg-[#eaeaea]">
+            _style={{ backgroundImage: `url('./image/${player.currPlayMusic?.artist || '李荣浩'}.webp')` }}
+            _className="bg-top bg-right bg-contain bg-no-repeat bg-[#eaeaea]">
             <CardBody>
               <div className="flex gap-x-5">
                 <Image

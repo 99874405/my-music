@@ -24,22 +24,13 @@ export default function App() {
 
   // Table
   const renderCell = useMemoizedFn((record, columnKey) => {
-    const getAvatarProps = (isCurrPlayMusic) => {
-      return {
-        src: record.coverArt,
-        isBordered: true,
-        className: isCurrPlayMusic ? `ani-rotate ${!player.isPlaying && 'ani-paused'}` : void 0,
-        color: isCurrPlayMusic ? !player.isPlaying ? 'success' : 'danger' : void 0,
-      }
-    }
-
     switch (columnKey) {
       case 'title':
         return (
           <User
             name={record.title}
             description={`${record.album}`}
-            avatarProps={getAvatarProps(player.currPlayMusic == record)} />
+            avatarProps={{ src: record.coverArt, radius: 'sm' }} />
         )
 
       case 'artist':
@@ -81,7 +72,6 @@ export default function App() {
           <NavbarItem>
             <Avatar
               size="sm"
-              radius="sm"
               src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
           </NavbarItem>
         </NavbarContent>

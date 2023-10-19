@@ -95,7 +95,7 @@ export default function App() {
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
                 <div className="pt-1 w-[280px]">
                   <h3 className="font-semibold text-foreground/90">{renderSong('title')}</h3>
-                  <p className="text-sm text-foreground/80">{renderSong('artist')}</p>
+                  <div className="text-sm text-foreground/80">{renderSong('artist')}</div>
                   <h1 className="font-medium text-lg mt-2">Frontend Radio</h1>
                   {/*  
                   <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>

@@ -124,6 +124,7 @@ export default function App() {
                       isIconOnly
                       radius="full"
                       variant="light"
+                      onClick={() => player.playPrev()}
                       className="data-[hover]:bg-foreground/10">
                       <PreviousIcon />
                     </Button>
@@ -131,6 +132,7 @@ export default function App() {
                       isIconOnly
                       radius="full"
                       variant="light"
+                      onClick={() => player.play()}
                       className="w-auto h-auto data-[hover]:bg-foreground/10">
                       <PauseCircleIcon size={45} />
                     </Button>
@@ -138,6 +140,7 @@ export default function App() {
                       isIconOnly
                       radius="full"
                       variant="light"
+                      onClick={() => player.playNext()}
                       className="data-[hover]:bg-foreground/10">
                       <NextIcon />
                     </Button>
@@ -149,42 +152,6 @@ export default function App() {
                       <ShuffleIcon className="text-foreground/80" />
                     </Button>
                   </div>
-                  {/*  
-                  <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
-                  <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>
-                  <div className="flex items-center my-5 text-sm text-stone-800"><Divider /></div>
-                  <div className="flex items-center mt-1 text-sm text-stone-800"><FcMusic />&nbsp;{renderSong()}</div>
-                  <div className="flex items-center mt-2 text-sm text-stone-800">
-                    <Button
-                      size="sm"
-                      startContent={<FaHeadphones />}
-                      className={`${!player.isPlaying ? 'bg-green-600' : 'bg-danger'} text-white`}
-                      disabled={player.dataLoading}
-                      onClick={() => player.play()}>
-                      {!player.isPlaying ? '播放' : '暂停'}
-                    </Button>
-                    {player.currPlayMusic && (
-                      <Button
-                        size="sm"
-                        isIconOnly
-                        className="ml-2"
-                        disabled={player.dataLoading}
-                        onClick={() => player.playPrev()}>
-                        <FaFastBackward />
-                      </Button>
-                    )}
-                    {player.currPlayMusic && (
-                      <Button
-                        size="sm"
-                        isIconOnly
-                        className="ml-2"
-                        disabled={player.dataLoading}
-                        onClick={() => player.playNext()}>
-                        <FaFastForward />
-                      </Button>
-                    )}
-                  </div>
-                */}
                 </div>
               </div>
             </CardBody>

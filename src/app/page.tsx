@@ -93,7 +93,7 @@ export default function App() {
                   shadow="md"
                   className="object-cover"
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
-                <div className="pt-0">
+                <div className="pt-1 w-[280px]">
                   <h3 className="font-semibold text-foreground/90">{renderSong('title')}</h3>
                   <p className="text-sm text-foreground/80">{renderSong('artist')}</p>
                   <h1 className="font-medium text-lg mt-2">Frontend Radio</h1>

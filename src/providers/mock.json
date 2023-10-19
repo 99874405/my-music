@@ -120,6 +120,14 @@
       "duration": "03:50",
       "coverArt": "./image/杨丞琳-像是一颗星星.webp",
       "playLink": "./music/杨丞琳-像是一颗星星.mp3"
+    },
+    {
+      "title": "Letting Go",
+      "album": "说到爱",
+      "artist": "蔡健雅",
+      "duration": "04:23",
+      "coverArt": "./image/蔡健雅-Letting Go.webp",
+      "playLink": "./music/蔡健雅-Letting Go.mp3"
     }
   ]
 }

@@ -69,7 +69,7 @@ export default function App() {
         shouldHideOnScroll>
         <NavbarBrand>
           <span className="cursor-pointer">
-            <LogoIcon size="40" />
+            <LogoIcon size={40} />
           </span>
         </NavbarBrand>
         <NavbarContent justify="end">
@@ -111,6 +111,43 @@ export default function App() {
                       <p className="text-sm">1:23</p>
                       <p className="text-sm text-foreground/50">4:32</p>
                     </div>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <Button
+                      isIconOnly
+                      radius="full"
+                      variant="light"
+                      className="data-[hover]:bg-foreground/10">
+                      <RepeatOneIcon className="text-foreground/80" />
+                    </Button>
+                    <Button
+                      isIconOnly
+                      radius="full"
+                      variant="light"
+                      className="data-[hover]:bg-foreground/10">
+                      <PreviousIcon />
+                    </Button>
+                    <Button
+                      isIconOnly
+                      radius="full"
+                      variant="light"
+                      className="w-auto h-auto data-[hover]:bg-foreground/10">
+                      <PauseCircleIcon size={45} />
+                    </Button>
+                    <Button
+                      isIconOnly
+                      radius="full"
+                      variant="light"
+                      className="data-[hover]:bg-foreground/10">
+                      <NextIcon />
+                    </Button>
+                    <Button
+                      isIconOnly
+                      radius="full"
+                      variant="light"
+                      className="data-[hover]:bg-foreground/10">
+                      <ShuffleIcon className="text-foreground/80" />
+                    </Button>
                   </div>
                   {/*  
                   <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>

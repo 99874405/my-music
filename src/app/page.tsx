@@ -10,9 +10,9 @@ import { default as confetti } from 'canvas-confetti'
 
 export default function App() {
   const player = usePlayer()
-  const renderSong = useMemoizedFn(() => {
-    if (player.currPlayMusic) return `${player.currPlayMusic.title} - ${player.currPlayMusic.artist}`
-    return '未播放音乐'
+  const renderSong = useMemoizedFn((field) => {
+    if (player.currPlayMusic) return `${player.currPlayMusic[field]}`
+    return ({ title: '未播放音乐', artist: '-' })[field]
   })
 
   const renderCell = useMemoizedFn((record, columnKey) => {
@@ -85,7 +85,10 @@ export default function App() {
                   shadow="md"
                   className="object-cover"
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
-                <div className="pt-2">
+                <div className="pt-0">
+                  <h3 className="font-semibold text-foreground/90">{renderSong('title')}</h3>
+                  <p className="text-sm text-foreground/80">{renderSong('artist')}</p>
+                  <h1 className="font-medium text-lg mt-2">Frontend Radio</h1>
                   {/*  
                   <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
                   <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>

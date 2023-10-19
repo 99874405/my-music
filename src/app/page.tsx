@@ -91,7 +91,7 @@ export default function App() {
                   shadow="md"
                   className="object-cover hidden sm:block"
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
-                <div className="pt-1 w-[350px]">
+                <div className="pt-1 w-full sm:w-[350px]">
                   <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
                   <div className="text-sm text-foreground/80">{player.data.length} Tracks</div>
                   <h1 className="font-medium text-lg mt-3">{renderSong('title')}</h1>

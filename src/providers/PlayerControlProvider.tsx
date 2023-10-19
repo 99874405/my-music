@@ -21,7 +21,6 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     currPlayMusicIndex: -1,
     currPlayProcess: 0,
     currPlayTime: '0:00',
-    currDoneTime: '4:00',
   })
 
   useMount(() => {
@@ -45,7 +44,7 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     }
 
     setState({ isPlaying: true, currPlayMusic: state.data[musicIndex || 0], currPlayMusicIndex: musicIndex || 0 })
-    setState({ currPlayProcess: 0, currPlayTime: '0:00', currDoneTime: '4:00' })
+    setState({ currPlayProcess: 0, currPlayTime: '0:00' })
     audioControl.src = state.data[musicIndex || 0].playLink
     audioControl.play()
   })
@@ -78,7 +77,6 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     setState({
       currPlayProcess: (audioControl.currentTime / audioControl.duration) * 100,
       currPlayTime: format(audioControl.currentTime),
-      currDoneTime: format(audioControl.duration),
     })
   }, {
     target: audioControl,

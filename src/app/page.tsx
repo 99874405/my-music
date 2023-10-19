@@ -103,7 +103,7 @@ export default function App() {
                       classNames={{ indicator: "bg-gradient-to-r from-black to-black" }} />
                     <div className="flex justify-between">
                       <p className="text-sm">{player.currPlayTime}</p>
-                      <p className="text-sm text-foreground/50">{player.currDoneTime}</p>
+                      <p className="text-sm text-foreground/50">{player.currPlayMusic?.duration || '4:00'}</p>
                     </div>
                   </div>
                   <div className="flex items-center justify-center">

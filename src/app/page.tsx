@@ -83,7 +83,7 @@ export default function App() {
         <div className="mt-5">
           <Card className="bg-background/100">
             <CardBody>
-              <div className="flex gap-x-5">
+              <div className="flex sm:gap-x-5">
                 <Image
                   width={164}
                   height={164}

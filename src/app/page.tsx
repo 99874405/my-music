@@ -11,8 +11,7 @@ import { default as confetti } from 'canvas-confetti'
 export default function App() {
   const player = usePlayer()
   const renderSong = useMemoizedFn((field) => {
-    if (player.currPlayMusic) return `${player.currPlayMusic[field]}`
-    return ({ title: '未播放音乐', artist: '-' })[field]
+    return (player.currPlayMusic || { title: '未播放音乐', artist: '-' })[field]
   })
 
   const renderCell = useMemoizedFn((record, columnKey) => {

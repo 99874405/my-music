@@ -68,12 +68,19 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
   })
 
   // 播放进度
-  useEventListener('timeupdate', () =>
+  useEventListener('timeupdate', () => {
+    function format(time) {
+      const minutes = Math.floor(time / 60) || 0;
+      const seconds = Math.floor(time % 60) || 0;
+      return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+    }
+
     setState({
       currPlayProcess: (audioControl.currentTime / audioControl.duration) * 100,
-      currPlayTime: audioControl.currentTime,
-      currDoneTime: audioControl.duration,
-    }), {
+      currPlayTime: format(audioControl.currentTime),
+      currDoneTime: format(audioControl.duration),
+    })
+  }, {
     target: audioControl,
   })
 

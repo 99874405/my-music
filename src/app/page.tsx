@@ -96,8 +96,8 @@ export default function App() {
                 <div className="pt-1 w-[280px]">
                   <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
                   <div className="text-sm text-foreground/80">{player.data?.length || 0} Tracks</div>
-                  <h1 className="font-medium text-lg mt-2">{renderSong('title')}</h1>
-                  <div className="flex flex-col gap-y-1 mt-2">
+                  <h1 className="font-medium text-lg mt-3">{renderSong('title')}</h1>
+                  <div className="flex flex-col gap-y-1 mt-1">
                     <Progress
                       size="sm"
                       value={33}

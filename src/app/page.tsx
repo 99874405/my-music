@@ -99,7 +99,7 @@ export default function App() {
                       size="sm"
                       value={player.currPlayProcess}
                       aria-label="Example progress"
-                      classNames={{ indicator: "bg-[#000]" }} />
+                      classNames={{ indicator: "bg-gradient-to-r from-black to-black" }} />
                     <div className="flex justify-between">
                       <p className="text-sm">{player.currPlayTime}</p>
                       <p className="text-sm text-foreground/50">{player.currDoneTime}</p>

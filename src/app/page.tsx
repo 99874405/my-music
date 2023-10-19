@@ -75,7 +75,7 @@ export default function App() {
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-5">
-          <Card className="bg-background/40">
+          <Card className="bg-background/100">
             <CardBody>
               <div className="flex gap-x-5">
                 <Image

@@ -75,17 +75,18 @@ export default function App() {
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-5">
-          <Card
-            _style={{ backgroundImage: `url('./image/${player.currPlayMusic?.artist || '李荣浩'}.webp')` }}
-            _className="bg-top bg-right bg-contain bg-no-repeat bg-[#eaeaea]">
+          <Card className="bg-background/90">
             <CardBody>
               <div className="flex gap-x-5">
                 <Image
-                  width={166}
-                  height={166}
+                  width={164}
+                  height={164}
                   alt=""
+                  shadow="lg"
+                  className="object-cover"
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
                 <div className="pt-2">
+                  {/*  
                   <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;夏天漫步世界</div>
                   <div className="flex items-center mt-1 text-sm text-stone-500"><FcDebian />&nbsp;Summer</div>
                   <div className="flex items-center my-5 text-sm text-stone-800"><Divider /></div>
@@ -120,6 +121,7 @@ export default function App() {
                       </Button>
                     )}
                   </div>
+                */}
                 </div>
               </div>
             </CardBody>

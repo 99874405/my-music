@@ -67,7 +67,7 @@ export default function App() {
             </Chip>
           </NavbarItem>
           <NavbarItem>
-            <Avatar size="sm" src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
+            <Avatar size="sm" radius="sm" src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
           </NavbarItem>
         </NavbarContent>
       </Navbar>

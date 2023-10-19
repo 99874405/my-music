@@ -9,11 +9,15 @@ import { default as Logo } from '../components/logo'
 import { default as confetti } from 'canvas-confetti'
 
 export default function App() {
+  // Hook
   const player = usePlayer()
+
+  // Card
   const renderSong = useMemoizedFn((field) => {
     return (player.currPlayMusic || { title: '未播放音乐', artist: '-' })[field]
   })
 
+  // Table
   const renderCell = useMemoizedFn((record, columnKey) => {
     const getAvatarProps = (isCurrPlayMusic) => {
       return {
@@ -32,6 +36,7 @@ export default function App() {
             description={`专辑: ${record.album}`}
             avatarProps={getAvatarProps(player.currPlayMusic == record)} />
         )
+
       case 'artist':
         return (
           <Tooltip color="danger" content="大麦网">
@@ -42,6 +47,7 @@ export default function App() {
             </span>
           </Tooltip>
         )
+
       case 'duration':
         return (
           <span className="text-stone-600">
@@ -68,7 +74,10 @@ export default function App() {
             </Chip>
           </NavbarItem>
           <NavbarItem>
-            <Avatar size="sm" radius="sm" src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
+            <Avatar
+              size="sm"
+              radius="sm"
+              src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
           </NavbarItem>
         </NavbarContent>
       </Navbar>

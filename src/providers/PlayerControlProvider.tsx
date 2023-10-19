@@ -19,6 +19,7 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
     isPlaying: false,
     currPlayMusic: null,
     currPlayMusicIndex: -1,
+    currPlayProcess: 0,
   })
 
   useMount(() => {
@@ -41,10 +42,9 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
       return audioControl.paused ? audioControl.play() : audioControl.pause()
     }
 
-    setState({ isPlaying: true, currPlayMusic: state.data[musicIndex || 0], currPlayMusicIndex: musicIndex || 0 })
+    setState({ isPlaying: true, currPlayMusic: state.data[musicIndex || 0], currPlayMusicIndex: musicIndex || 0, currPlayProcess: 0 })
     audioControl.src = state.data[musicIndex || 0].playLink
     audioControl.play()
-    NProgress.set(0)
   })
 
   // 手动播放 上首音乐
@@ -66,7 +66,7 @@ export function PlayerControlProvider({ children }: { children: React.ReactNode 
 
   // 播放进度
   useEventListener('timeupdate', () =>
-    NProgress.set(audioControl.currentTime / audioControl.duration), {
+    setState({ currPlayProcess: (audioControl.currentTime / audioControl.duration) * 100 }), {
     target: audioControl,
   })
 

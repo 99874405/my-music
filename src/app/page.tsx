@@ -66,7 +66,7 @@ export default function App() {
         <NavbarContent justify="end">
           <NavbarItem>
             <Chip className="cursor-pointer" color="success" variant="dot">
-              <span onClick={() => confetti()}>New Version 0.1.1 🎉</span>
+              <span onClick={() => confetti()}>New Version 0.2.0 🎉</span>
             </Chip>
           </NavbarItem>
           <NavbarItem>
@@ -92,12 +92,13 @@ export default function App() {
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
                 <div className="pt-1 w-[350px]">
                   <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
-                  <div className="text-sm text-foreground/80">{player.data?.length || 0} Tracks</div>
+                  <div className="text-sm text-foreground/80">{player.data.length} Tracks</div>
                   <h1 className="font-medium text-lg mt-3">{renderSong('title')}</h1>
                   <div className="flex flex-col gap-y-1 mt-1">
                     <Progress
                       size="sm"
-                      value={0}
+                      value={player.currPlayProcess}
+                      aria-label="Example progress"
                       classNames={{ indicator: "bg-default-800", track: "bg-default-500/30" }} />
                     <div className="flex justify-between">
                       <p className="text-sm">0:00</p>
@@ -152,8 +153,8 @@ export default function App() {
         <div className="mt-5">
           <Table
             isStriped
-            classNames={{ table: 'min-h-[400px]', wrapper: 'bg-background/70' }}
-            aria-label="Example table with custom cells">
+            aria-label="Example table"
+            classNames={{ table: 'min-h-[400px]', wrapper: 'bg-background/70' }}>
             <TableHeader>
               <TableColumn>Title</TableColumn>
               <TableColumn>Artist</TableColumn>

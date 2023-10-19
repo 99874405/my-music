@@ -14,7 +14,7 @@ export default function App() {
 
   // Card
   const renderSong = useMemoizedFn((field) => {
-    return (player.currPlayMusic || { title: '未播放音乐', artist: '-' })[field]
+    return (player.currPlayMusic || { title: 'Frontend Radio', artist: '-' })[field]
   })
 
   // Table
@@ -94,9 +94,9 @@ export default function App() {
                   className="object-cover"
                   src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
                 <div className="pt-1 w-[280px]">
-                  <h3 className="font-semibold text-foreground/90">{renderSong('title')}</h3>
-                  <div className="text-sm text-foreground/80">{renderSong('artist')}</div>
-                  <h1 className="font-medium text-lg mt-2">Frontend Radio</h1>
+                  <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
+                  <div className="text-sm text-foreground/80">{player.data?.length || 0} Tracks</div>
+                  <h1 className="font-medium text-lg mt-2">{renderSong('title')}</h1>
                   <div className="flex flex-col gap-y-1 mt-2">
                     <Progress
                       size="sm"

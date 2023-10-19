@@ -35,7 +35,7 @@ export default function App() {
         )
       case 'artist':
         return (
-          <Tooltip color="danger" content="演唱会">
+          <Tooltip color="danger" content="大麦网">
             <span className="text-stone-600 hover:text-rose-600">
               <a target="_blank" onClick={e => e.stopPropagation()} href={`https://search.damai.cn/search.html?keyword=${record[columnKey]}`}>
                 {record[columnKey]}

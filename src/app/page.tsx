@@ -5,7 +5,7 @@ import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
 import { usePlayer } from '../providers/PlayerControlProvider'
 import { useMemoizedFn } from 'ahooks'
-import { default as Logo } from '../components/logo'
+import { LogoIcon as Logo } from '../components/LogoIcon'
 import { default as confetti } from 'canvas-confetti'
 
 export default function App() {

@@ -128,6 +128,22 @@
       "duration": "04:23",
       "coverArt": "./image/蔡健雅-Letting Go.webp",
       "playLink": "./music/蔡健雅-Letting Go.mp3"
+    },
+    {
+      "title": "情歌",
+      "album": "现在开始我爱你",
+      "artist": "梁静茹",
+      "duration": "04:20",
+      "coverArt": "./image/梁静茹-情歌.webp",
+      "playLink": "./music/梁静茹-情歌.mp3"
+    },
+    {
+      "title": "最后一页",
+      "album": "恋习",
+      "artist": "Cover 洛尘鞅",
+      "duration": "04:22",
+      "coverArt": "./image/江语晨-最后一页.webp",
+      "playLink": "./music/江语晨-最后一页.m4a"
     }
   ]
 }

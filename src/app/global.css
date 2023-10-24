@@ -9,10 +9,12 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 .ani-rotate {
   animation: rotate 18s linear infinite;
 }
@@ -25,6 +27,7 @@
     transform: scale(5);
   }
 }
+
 .ani-circle {
   animation: circle 3s linear;
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -35,7 +38,7 @@
 }
 
 
-/* 动画暂停 */
+/* 动画: 暂停 */
 .ani-paused {
   animation-play-state: paused;
 }
@@ -43,6 +46,8 @@
 
 /* 默认样式 */
 * {
-  -webkit-tap-highlight-color: transparent; /* 禁用默认高亮颜色 */
-  touch-action: manipulation; /* 提供更快的点击反馈 */
+  /* 禁用默认高亮颜色 */
+  -webkit-tap-highlight-color: transparent;
+  /* 提供更快的点击反馈 */
+  touch-action: manipulation;
 }

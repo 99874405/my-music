@@ -3,7 +3,7 @@
   "data": [
     {
       "title": "不遗憾",
-      "album": "你的婚礼 电影原声带",
+      "album": "电影: 你的婚礼",
       "artist": "李荣浩",
       "duration": "05:20",
       "coverArt": "./image/李荣浩-不遗憾.webp",
@@ -140,7 +140,7 @@
     {
       "title": "最后一页",
       "album": "恋习",
-      "artist": "Cover 洛尘鞅",
+      "artist": "江语晨",
       "duration": "04:22",
       "coverArt": "./image/江语晨-最后一页.webp",
       "playLink": "./music/江语晨-最后一页.m4a"

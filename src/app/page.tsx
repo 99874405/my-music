@@ -64,6 +64,7 @@ export default function App() {
             <LogoIcon size={40} />
           </span>
         </NavbarBrand>
+        {/*
         <NavbarContent justify="end">
           <NavbarItem>
             <Chip className="cursor-pointer" color="success" variant="dot">
@@ -78,6 +79,7 @@ export default function App() {
             </span>
           </NavbarItem>
         </NavbarContent>
+        */}
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-5">

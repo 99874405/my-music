@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="light">
-      <body className="bg-gradient-to-br from-[#fff1eb] to-indigo-200">
+      <body className="bg-[url('https://usedapp.io/img/backgrounds/hero__background.jpg')] bg-no-repeat">
         <NextUIProvider>
           <PlayerControlProvider>
             {children}

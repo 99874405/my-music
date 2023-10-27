@@ -83,75 +83,90 @@ export default function App() {
       </Navbar>
       <div className="max-w-screen-lg mx-auto p-5 pt-0">
         <div className="mt-5">
-          <Card className="bg-background/100">
-            <CardBody>
-              <div className="flex sm:gap-x-5">
-                <Image
-                  width={164}
-                  height={164}
-                  alt=""
-                  shadow="md"
-                  className="object-cover hidden sm:block"
-                  src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
-                <div className="pt-1 w-full sm:w-[350px]">
-                  <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
-                  <div className="text-sm text-foreground/80">{player.data.length} Tracks</div>
-                  <h1 className="font-medium text-lg mt-3">{renderSong('title')}</h1>
-                  <div className="flex flex-col gap-y-1 mt-1">
-                    <Progress
-                      size="sm"
-                      value={player.currPlayProcess}
-                      aria-label="Example progress"
-                      classNames={{ indicator: "bg-gradient-to-r from-black to-black" }} />
-                    <div className="flex justify-between">
-                      <p className="text-sm">{player.currPlayTime}</p>
-                      <p className="text-sm text-foreground/50">{player.currPlayMusic?.duration || '4:00'}</p>
+          <div className="flex">
+            <Card className="bg-background/100">
+              <CardBody>
+                <div className="flex sm:gap-x-5">
+                  <Image
+                    width={164}
+                    height={164}
+                    alt=""
+                    shadow="md"
+                    className="object-cover hidden sm:block"
+                    src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
+                  <div className="pt-1 w-full sm:w-[350px]">
+                    <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
+                    <div className="text-sm text-foreground/80">{player.data.length} Tracks</div>
+                    <h1 className="font-medium text-lg mt-3">{renderSong('title')}</h1>
+                    <div className="flex flex-col gap-y-1 mt-1">
+                      <Progress
+                        size="sm"
+                        value={player.currPlayProcess}
+                        aria-label="Example progress"
+                        classNames={{ indicator: "bg-gradient-to-r from-black to-black" }} />
+                      <div className="flex justify-between">
+                        <p className="text-sm">{player.currPlayTime}</p>
+                        <p className="text-sm text-foreground/50">{player.currPlayMusic?.duration || '4:00'}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <Button
+                        isIconOnly
+                        radius="full"
+                        variant="light"
+                        className="data-[hover]:bg-foreground/10">
+                        <RepeatOneIcon className="text-foreground/80" />
+                      </Button>
+                      <Button
+                        isIconOnly
+                        radius="full"
+                        variant="light"
+                        onClick={() => player.playPrev()}
+                        className="data-[hover]:bg-foreground/10">
+                        <PreviousIcon />
+                      </Button>
+                      <Button
+                        isIconOnly
+                        radius="full"
+                        variant="light"
+                        onClick={() => player.play()}
+                        className="w-auto h-auto data-[hover]:bg-foreground/10">
+                        {player.isPlaying ? <PauseCircleIcon size={45} /> : <PlayCircleIcon size={45} />}
+                      </Button>
+                      <Button
+                        isIconOnly
+                        radius="full"
+                        variant="light"
+                        onClick={() => player.playNext()}
+                        className="data-[hover]:bg-foreground/10">
+                        <NextIcon />
+                      </Button>
+                      <Button
+                        isIconOnly
+                        radius="full"
+                        variant="light"
+                        className="data-[hover]:bg-foreground/10">
+                        <ShuffleIcon className="text-foreground/80" />
+                      </Button>
                     </div>
                   </div>
-                  <div className="flex items-center justify-center">
-                    <Button
-                      isIconOnly
-                      radius="full"
-                      variant="light"
-                      className="data-[hover]:bg-foreground/10">
-                      <RepeatOneIcon className="text-foreground/80" />
-                    </Button>
-                    <Button
-                      isIconOnly
-                      radius="full"
-                      variant="light"
-                      onClick={() => player.playPrev()}
-                      className="data-[hover]:bg-foreground/10">
-                      <PreviousIcon />
-                    </Button>
-                    <Button
-                      isIconOnly
-                      radius="full"
-                      variant="light"
-                      onClick={() => player.play()}
-                      className="w-auto h-auto data-[hover]:bg-foreground/10">
-                      {player.isPlaying ? <PauseCircleIcon size={45} /> : <PlayCircleIcon size={45} />}
-                    </Button>
-                    <Button
-                      isIconOnly
-                      radius="full"
-                      variant="light"
-                      onClick={() => player.playNext()}
-                      className="data-[hover]:bg-foreground/10">
-                      <NextIcon />
-                    </Button>
-                    <Button
-                      isIconOnly
-                      radius="full"
-                      variant="light"
-                      className="data-[hover]:bg-foreground/10">
-                      <ShuffleIcon className="text-foreground/80" />
-                    </Button>
-                  </div>
                 </div>
-              </div>
-            </CardBody>
-          </Card>
+              </CardBody>
+            </Card>
+            <Card className="bg-background/100">
+              <CardBody>
+                <div className="flex sm:gap-x-5">
+                  <Image
+                    width={164}
+                    height={164}
+                    alt=""
+                    shadow="md"
+                    className="object-cover hidden sm:block"
+                    src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
+                </div>
+              </CardBody>
+            </Card>
+          </div>
         </div>
         <div className="mt-5">
           <Table

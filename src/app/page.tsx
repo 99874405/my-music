@@ -1,5 +1,5 @@
 'use client'
-import { Card, CardBody, Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User, Tooltip } from '@nextui-org/react'
+import { Card, CardHeader, CardBody, CardFooter, Image, Button, Divider, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Spinner, User, Tooltip } from '@nextui-org/react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Chip, Avatar, Progress } from '@nextui-org/react'
 import { FaHeadphones, FaFastBackward, FaFastForward } from 'react-icons/fa'
 import { FcDebian, FcMusic } from 'react-icons/fc'
@@ -154,17 +154,35 @@ export default function App() {
               </CardBody>
             </Card>
             <Card className="bg-background/100">
-              <CardBody>
-                <div className="flex sm:gap-x-5">
-                  <Image
-                    width={164}
-                    height={164}
-                    alt=""
-                    shadow="md"
-                    className="object-cover hidden sm:block"
-                    src={player.currPlayMusic?.coverArt || './image/coverArt.webp'} />
+              <CardHeader className="justify-between">
+                <div className="flex gap-5">
+                  <Avatar isBordered radius="full" size="md" src="https://img9.doubanio.com/icon/ul140962189-45.jpg" />
+                  <div className="flex flex-col gap-1 items-start justify-center">
+                    <h4 className="text-small font-semibold leading-none text-default-600">Summer</h4>
+                    <h5 className="text-small tracking-tight text-default-400">summer@gmail.com</h5>
+                  </div>
                 </div>
+                <Button
+                  color="primary"
+                  radius="full"
+                  size="sm"
+                  variant="solid">
+                  Follow
+                </Button>
+              </CardHeader>
+              <CardBody className="px-3 py-0 text-small text-default-400">
+                <p>Full-stack developer, @getnextui lover she/her 🎉</p>
               </CardBody>
+              <CardFooter className="gap-3">
+                <div className="flex gap-1">
+                  <p className="font-semibold text-default-400 text-small">4</p>
+                  <p className="text-default-400 text-small">Following</p>
+                </div>
+                <div className="flex gap-1">
+                  <p className="font-semibold text-default-400 text-small">97.1K</p>
+                  <p className="text-default-400 text-small">Followers</p>
+                </div>
+              </CardFooter>
             </Card>
           </div>
         </div>
